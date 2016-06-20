@@ -1,0 +1,59 @@
+import java.util.*;
+  public class Monk{
+ 
+  public static void main(String[] arg){
+    Scanner in = new Scanner(System.in);
+    System.out.println("Typing Ur Name");
+    String p = in.nextLine();
+    Player p1 = new Player(p);
+    System.out.println("Boss : "+p1.name+" was a good worker, I am sad you are leaving the company. Good luck on becoming a monk.")
+    System.out.println("Boss : "+p1.name+" get 30days")
+    p1.money=100;
+    p1.zen=0;
+  
+    
+    
+  }
+}
+
+public class Player{
+  String name;
+  int money;
+  int zen
+    
+    public Player(String name){
+    this.name = name ;
+  }
+}
+
+
+public class Temple{
+  ..
+    for (int i=1; i<31; i++){
+    System.out.println("today is "+ i +" day")
+      System.out.println(p1.name+" have "+p1.money+"$"+p1.zen);
+    System.out.println("Meditate          press -> 1")
+      System.out.println("Help Someone      press -> 2")
+      System.out.println("Work at Company   press -> 3")
+      System.out.println("Purchase Temple   press -> 4")
+      
+      Scanner in = new Scanner(System.in);
+    int input = int.nextInt();
+    
+    if(input == 1){
+      p1.zen +=1
+    }
+    if(input == 2){
+      p1.zen +=5;
+      p1.money -=10;
+    }
+    if(input == 3){
+      p1.money +=50
+        p1.zen -=30
+    }
+    if(input == 4){
+      
+      
+    }
+    
+  }
