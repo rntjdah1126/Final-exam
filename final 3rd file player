@@ -1,0 +1,12 @@
+public class Player{
+  String name;
+  int money;
+  int zen;
+  int collect;
+  
+  public Player(String name,int money, int zen){
+    this.name = name ;
+    this.zen = zen;
+    this.money = money;
+  }
+}
