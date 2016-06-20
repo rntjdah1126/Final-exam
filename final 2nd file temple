@@ -1,0 +1,41 @@
+import java.util.*;
+public class Temple{
+  public Temple(Player p1){
+    System.out.println("");
+    System.out.println(p1.name+" have "+p1.money+" $ / "+p1.zen +" zen  ");
+    System.out.println("Meditate          press -> 1    -  0 $     /   +  1 zen");
+    System.out.println("Help Someone      press -> 2    - 10 $     /   +  5 zen");
+    System.out.println("A temple offering press -> 3    + random $ /   +  0 zen  //  if U get 0$   /  - 2 zen");
+    System.out.println("Work at Company   press -> 4    + 50 $     /   - 30 zen"   );
+    System.out.println("Purchase Temple   press -> 5    - 70 $     /   +  0 zen  //  if U purchase temple  /  + 15 $   + 5 zen");
+    
+    Scanner in = new Scanner(System.in);
+    System.out.println("");
+    int input = in.nextInt();
+    System.out.println("You choose " + input);
+    
+    if(input == 1){
+      p1.zen +=1;
+    }
+    if(input == 2){
+      p1.zen +=5;
+      p1.money -=10;
+    }
+    if(input == 3){
+      p1.money +=(int)(Math.random()*5);
+    }
+    if(input == 4){
+      p1.money +=50;
+      p1.zen -=30;
+    }
+    if(input == 5){
+      p1.money -=70;
+      p1.collect +=1;
+    }
+    
+    System.out.println("Collecting from all temples");
+    System.out.println("Today collecting is " + 3 * p1.collect + " zen " + 15 * p1.collect + " $ ");
+    p1.zen += 3 * p1.collect;
+    p1.money += 15 * p1.collect;
+  }  
+}
