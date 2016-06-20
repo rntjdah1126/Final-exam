@@ -1,0 +1,18 @@
+import java.util.*;
+public class Monk {
+  public static void main(String[] args){
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("What is your name?");
+    String name = scanner.nextLine();
+    int money=100;
+    int zen=0;
+    Player p1 = new Player(name,money,zen);
+    System.out.println("Boss : "+p1.name+" were a good worker, I am sad you are leaving the company.Good luck on becoming a monk.");
+    System.out.println("Boss : Good luck on becoming a monk.");
+    
+    for (int i=1; i<31; i++){
+      System.out.println("today is "+i+"day");
+      Temple play = new Temple(p1);
+    }
+  }
+}
